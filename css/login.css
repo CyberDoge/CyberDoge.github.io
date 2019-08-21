@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gotham Bold'), url('../resources/Gotham-font/GothamBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gotham Book'), url('../resources/Gotham-font/GothamBook.woff') format('woff');
+}
 .page {
     height: 100vh;
     background-image: linear-gradient(-55deg, #18b38c, #6277df);
@@ -36,17 +49,21 @@
 
 
 .form__input {
+    width: 100%;
+    margin: auto;
+    background: #F1F1F1;
+    border-radius: 4px;
+    height: 48px;
+    padding: 14px 16px;
+}
+
+.form__input::placeholder {
     font-family: Gotham;
     font-size: 16px;
     line-height: 19px;
     color: #262626;
     mix-blend-mode: normal;
     opacity: 0.4;
-    width: 100%;
-    margin: auto;
-    background: #F1F1F1;
-    border-radius: 4px;
-    height: 48px;
 }
 
 .form__title {
@@ -68,4 +85,19 @@
 
 .form__input_content-div {
     padding: auto;
+}
+
+.form__submit {
+    width: 148px;
+    height: 48px;
+    background: #ED4159;
+    box-shadow: 0 4px 16px rgba(237, 65, 89, 0.4);
+    border-radius: 100px;
+    margin: 48px auto;
+    font-family: "Gotham Book";
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    content: "Login";
 }
