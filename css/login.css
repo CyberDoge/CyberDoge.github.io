@@ -19,9 +19,14 @@
     box-sizing: border-box;
     overflow: auto;
     background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 1fr 409px 1fr;
+    padding: 0;
+    height: 100vh;
 }
 
 .form {
+    margin: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -32,7 +37,8 @@
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
     align-items: stretch;
     height: 409px;
-    margin: 125px auto 0;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .form__element {
@@ -100,6 +106,6 @@
 }
 
 .header {
-    margin-top: 141px;
-    margin-left: 788px;
+    text-align: center;
+    padding-top: 142px;
 }
