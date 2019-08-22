@@ -19,26 +19,54 @@
     box-sizing: border-box;
     overflow: auto;
     background-attachment: fixed;
-    display: grid;
-    grid-template-rows: 1fr 409px 1fr;
-    padding: 0;
-    height: 100vh;
+    width: 100%;
+    height: auto;
 }
 
+.header {
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .form {
+        width: 100%;
+        margin: 0 16px;
+    }
+
+    .header {
+        margin-top: 43px;
+    }
+
+    .header__logo {
+        content: url("../resources/img/logo210x46_red_black.svg");
+    }
+}
+
+
+@media (min-width: 641px) {
+    .header {
+        margin-top: 141px;
+    }
+
+    .header__logo {
+        content: url("../resources/img/Logo.svg");
+    }
+
+    .form {
+        margin: 125px auto 0;
+        width: 600px;
+    }
+}
 .form {
-    margin: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 600px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
     align-items: stretch;
     height: 409px;
-    text-align: center;
-    vertical-align: middle;
 }
 
 .form__element {
@@ -103,9 +131,4 @@
     text-align: center;
     color: #FFFFFF;
     content: "Login";
-}
-
-.header {
-    text-align: center;
-    padding-top: 142px;
 }
