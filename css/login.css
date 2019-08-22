@@ -29,8 +29,8 @@
 
 @media (max-width: 640px) {
     .form {
-        width: 100%;
-        margin: 0 16px;
+        margin: 37px 16px;
+        height: 334px;
     }
 
     .header {
@@ -39,6 +39,18 @@
 
     .header__logo {
         content: url("../resources/img/logo210x46_red_black.svg");
+    }
+
+    .form__element {
+        margin: 32px 24px 0;
+    }
+
+    .form__input_email {
+        margin-bottom: 24px;
+    }
+
+    .form__submit {
+        margin: 40px auto;
     }
 }
 
@@ -55,6 +67,20 @@
     .form {
         margin: 125px auto 0;
         width: 600px;
+        height: 409px;
+    }
+
+    .form__element {
+        margin: 48px 48px 0;
+    }
+
+    .form__item {
+        margin-bottom: 32px;
+    }
+
+    .form_
+    .form__submit {
+        margin: 48px auto;
     }
 }
 .form {
@@ -66,29 +92,28 @@
     border-radius: 8px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
     align-items: stretch;
-    height: 409px;
 }
 
-.form__element {
-    margin: 48px 48px 0;
-}
 
 .form * {
     box-sizing: border-box;
     border: 0;
 }
 
+.hide {
+    display: none;
+}
 
-.form__input {
+
+.form__item {
     width: 100%;
-    margin: auto;
     background: #F1F1F1;
     border-radius: 4px;
     height: 48px;
     padding: 14px 16px;
 }
 
-.form__input::placeholder {
+.form__item::placeholder {
     font-family: Gotham, serif;
     font-size: 16px;
     line-height: 19px;
@@ -110,10 +135,6 @@
     opacity: 0.8;
 }
 
-.form__input_email {
-    margin-bottom: 32px;
-}
-
 .form__input_content-div {
     padding: auto;
 }
@@ -124,7 +145,6 @@
     background: #ED4159;
     box-shadow: 0 4px 16px rgba(237, 65, 89, 0.4);
     border-radius: 100px;
-    margin: 48px auto;
     font-family: "Gotham Book", serif;
     font-size: 14px;
     line-height: 17px;
