@@ -115,6 +115,12 @@
     border-radius: 4px;
     height: 48px;
     padding: 14px 16px;
+    font-family: Gotham, serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #262626;
+    mix-blend-mode: normal;
+    opacity: 0.8;
 }
 
 .form__input-item::placeholder {
@@ -178,4 +184,9 @@
     color: #ED4159;
     background: #FFFFFF;
     box-shadow: 0 2px 10px rgba(237, 65, 89, 0.5);
+}
+
+.form__input_email-wrong {
+    border: 1px solid #ED4159;
+    color: #ED4159;
 }
