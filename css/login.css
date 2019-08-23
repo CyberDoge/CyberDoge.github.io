@@ -19,6 +19,67 @@
     box-sizing: border-box;
     overflow: auto;
     background-attachment: fixed;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .form {
+        margin: 37px 16px;
+        height: 334px;
+    }
+
+    .header {
+        margin-top: 43px;
+    }
+
+    .header__logo {
+        content: url("../resources/img/logo210x46_red_black.svg");
+    }
+
+    .form__element {
+        margin: 32px 24px 0;
+    }
+
+    .form__input_email {
+        margin-bottom: 24px;
+    }
+
+    .form__submit {
+        margin: 40px auto;
+    }
+}
+
+
+@media (min-width: 641px) {
+    .header {
+        margin-top: 141px;
+    }
+
+    .header__logo {
+        content: url("../resources/img/Logo.svg");
+    }
+
+    .form {
+        margin: 125px auto 0;
+        width: 600px;
+    }
+
+    .form__element {
+        margin: 48px 48px 0;
+    }
+
+    .form__input-item {
+        margin-bottom: 32px;
+    }
+
+    .form__submit {
+        margin: 48px auto 60px;
+    }
 }
 
 .form {
@@ -26,35 +87,37 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 600px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
     align-items: stretch;
-    height: 409px;
-    margin: 125px auto 0;
 }
 
-.form__element {
-    margin: 48px 48px 0;
-}
 
 .form * {
     box-sizing: border-box;
     border: 0;
+    outline: none;
+}
+
+.hide {
+    display: none;
+}
+
+.form__input-item.last {
+    margin-bottom: 0;
 }
 
 
-.form__input {
+.form__input-item {
     width: 100%;
-    margin: auto;
     background: #F1F1F1;
     border-radius: 4px;
     height: 48px;
     padding: 14px 16px;
 }
 
-.form__input::placeholder {
+.form__input-item::placeholder {
     font-family: Gotham, serif;
     font-size: 16px;
     line-height: 19px;
@@ -76,12 +139,19 @@
     opacity: 0.8;
 }
 
-.form__input_email {
-    margin-bottom: 32px;
-}
-
 .form__input_content-div {
     padding: auto;
+}
+
+.form__invalid-email {
+    font-family: Gotham;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ED4159;
+    background: rgba(237, 65, 89, 0.25);
+    border-radius: 4px;
+    height: 40px;
+    padding: 11px 16px;
 }
 
 .form__submit {
@@ -90,7 +160,6 @@
     background: #ED4159;
     box-shadow: 0 4px 16px rgba(237, 65, 89, 0.4);
     border-radius: 100px;
-    margin: 48px auto;
     font-family: "Gotham Book", serif;
     font-size: 14px;
     line-height: 17px;
@@ -99,7 +168,14 @@
     content: "Login";
 }
 
-.header {
-    margin-top: 141px;
-    margin-left: 788px;
+.form__submit:hover {
+    background: #FFFFFF;
+    color: #ED4159;
+    box-shadow: 0 6px 20px rgba(237, 65, 89, 0.4);
+}
+
+.form__submit:active {
+    color: #ED4159;
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(237, 65, 89, 0.5);
 }
