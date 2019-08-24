@@ -18,7 +18,12 @@ form.onsubmit = (e) => {
     request.onreadystatechange = (e) => {
         if (request.readyState === 4) {
             if (request.status === 200) {
-                console.log(request.response)
+                emailInput.classList.remove("form__input_email-wrong");
+                passwordInput.classList.add("last");
+                const invalidEmail = document.querySelector(".form__invalid-email");
+                invalidEmail.classList.add("hide");
+                invalidEmail.classList.remove("last");
+                console.log(request.responseText)
             } else if (request.status === 400) {
                 emailInput.classList.add("form__input_email-wrong");
                 passwordInput.classList.remove("last");
