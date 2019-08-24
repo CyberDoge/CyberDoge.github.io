@@ -12,6 +12,31 @@
     src: local('Gotham Book'), url('../resources/font/Gotham-font/GothamBook.woff') format('woff');
 }
 
+::placeholder {
+    opacity: 0.4;
+    color: #262626;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: 0.4;
+    color: #262626;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    opacity: 0.4;
+    color: #262626;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    opacity: 0.4;
+    color: #262626;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    opacity: 0.4;
+    color: #262626;
+}
+
 .page {
     background-image: url("../resources/img/background.png");
     background-size: cover;
@@ -37,6 +62,10 @@
     }
 
     .header__logo {
+        display: none;
+    }
+
+    .header::before {
         content: url("../resources/img/logo210x46_red_black.svg");
     }
 
@@ -59,7 +88,7 @@
         margin-top: 141px;
     }
 
-    .header__logo {
+    .header__logo::before {
         content: url("../resources/img/Logo.svg");
     }
 
@@ -125,10 +154,6 @@
     color: #262626;
     mix-blend-mode: normal;
     opacity: 0.8;
-}
-
-.form__input-item::placeholder {
-    opacity: 0.4;
 }
 
 .form__input-item:focus {
