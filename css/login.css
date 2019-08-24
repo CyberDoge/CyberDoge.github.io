@@ -37,6 +37,10 @@
     }
 
     .header__logo {
+        display: none;
+    }
+
+    .header::before {
         content: url("../resources/img/logo210x46_red_black.svg");
     }
 
@@ -59,7 +63,7 @@
         margin-top: 141px;
     }
 
-    .header__logo {
+    .header__logo::before {
         content: url("../resources/img/Logo.svg");
     }
 
