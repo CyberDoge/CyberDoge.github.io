@@ -1,0 +1,39 @@
+@media (min-width: 641px) {
+    .user-info {
+        margin: 91px auto;
+    }
+}
+
+.user-info {
+    align-items: center;
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    margin-top: 48px;
+}
+
+
+.user-name {
+    font-family: Gotham, serif;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.233333px;
+    margin-top: 40px;
+    color: #262626;
+
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+
+.btn-logout {
+    width: 154px;
+    height: 48px;
+    margin: 56px auto 60px;
+    border: 0;
+    outline: none;
+}
