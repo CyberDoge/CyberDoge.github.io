@@ -113,7 +113,6 @@
     margin-bottom: 0;
 }
 
-
 .form__input-item {
     width: 100%;
     background: #F1F1F1;
@@ -129,12 +128,11 @@
 }
 
 .form__input-item::placeholder {
-    font-family: Gotham, serif;
-    font-size: 16px;
-    line-height: 19px;
-    color: #262626;
-    mix-blend-mode: normal;
     opacity: 0.4;
+}
+
+.form__input-item:focus {
+    border: 1px solid rgba(151, 151, 151, 0.25);
 }
 
 .form__title {
@@ -148,10 +146,6 @@
 
     mix-blend-mode: normal;
     opacity: 0.8;
-}
-
-.form__input_content-div {
-    padding: auto;
 }
 
 .form__invalid-email {
