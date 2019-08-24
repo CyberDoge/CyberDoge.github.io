@@ -10,6 +10,9 @@ const userInfo = `
 const emailInput = document.querySelector(".form__input_email");
 const passwordInput = document.querySelector(".form__input_password");
 const page = document.querySelector(".page");
+const invalidEmail = document.querySelector(".form__invalid-email");
+const form = document.querySelector(".form");
+
 const parseForm = () => {
     return JSON.stringify({
         "email": emailInput.value,
@@ -17,7 +20,6 @@ const parseForm = () => {
     });
 };
 
-const form = document.querySelector(".form");
 
 let wasSent = false;
 
@@ -34,14 +36,12 @@ form.onsubmit = (e) => {
             if (request.status === 200) {
                 emailInput.classList.remove("form__input_email-wrong");
                 passwordInput.classList.add("last");
-                const invalidEmail = document.querySelector(".form__invalid-email");
                 invalidEmail.classList.add("hide");
                 invalidEmail.classList.remove("last");
                 setUserInfo(JSON.parse(request.responseText));
             } else if (request.status === 400) {
                 emailInput.classList.add("form__input_email-wrong");
                 passwordInput.classList.remove("last");
-                const invalidEmail = document.querySelector(".form__invalid-email");
                 invalidEmail.classList.remove("hide");
                 invalidEmail.classList.add("last");
             }
@@ -53,7 +53,7 @@ form.onsubmit = (e) => {
 };
 
 const setUserInfo = (jsonObj) => {
-    form.classList.add("hide");
+    page.removeChild(form);
     page.insertAdjacentHTML("beforeend", userInfo);
     const userInfoDiv = document.querySelector(".user-info");
     userInfoDiv.querySelector(".user-icon").src = jsonObj.photoUrl;
@@ -62,5 +62,5 @@ const setUserInfo = (jsonObj) => {
 
 const logout = () => {
     page.removeChild(document.querySelector(".user-info"));
-    form.classList.remove("hide");
+    page.appendChild(form)
 };
