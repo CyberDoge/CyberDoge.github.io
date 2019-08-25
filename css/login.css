@@ -49,10 +49,6 @@
     background-repeat: no-repeat;
 }
 
-.header {
-    text-align: center;
-}
-
 @media (max-width: 640px) {
     .central-block {
         margin: 37px 16px;
@@ -60,6 +56,7 @@
 
     .header {
         margin-top: 43px;
+        padding-left: 20.94%
     }
 
     .header__logo {
@@ -91,6 +88,7 @@
 @media (min-width: 641px) {
     .header {
         margin-top: 141px;
+        padding-left: 41.04%;
     }
 
     .header__logo::before {
@@ -184,13 +182,16 @@
 
 .form__invalid-email {
     font-family: Gotham;
-    font-size: 14px;
-    line-height: 17px;
     color: #ED4159;
     background: rgba(237, 65, 89, 0.25);
     border-radius: 4px;
-    height: 40px;
+    font-size: 16px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
     padding: 11px 16px;
+    height: auto;
 }
 
 .form__submit {
