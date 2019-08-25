@@ -46,6 +46,7 @@
     background-attachment: fixed;
     width: 100%;
     height: auto;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -80,6 +81,10 @@
     .form__submit {
         margin: 40px auto;
     }
+
+    .page {
+        background-image: url("../resources/img/background-mobile.png");
+    }
 }
 
 
@@ -110,6 +115,10 @@
 
     .form__submit {
         margin: 48px auto 60px;
+    }
+
+    .page {
+        background-image: url("../resources/img/background.png");
     }
 }
 
