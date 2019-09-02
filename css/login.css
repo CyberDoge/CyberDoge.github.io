@@ -37,16 +37,25 @@
     color: #262626;
 }
 
+body {
+    height: -moz-calc(100vh - 1px);
+    height: -webkit-calc(100vh - 1px);
+    height: -o-calc(100vh - 1px);
+    height: calc(100vh - 1px);
+    margin: 1px 0px 0 0;
+}
+
 .page {
     background-image: url("../resources/img/background.png");
-    background-size: cover;
+    background-size: initial;
     margin: 0;
     box-sizing: border-box;
     overflow: auto;
     background-attachment: fixed;
     width: 100%;
-    height: auto;
-    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    position: relative;
 }
 
 @media (max-width: 640px) {
@@ -96,7 +105,7 @@
     }
 
     .form {
-        margin: 125px auto 0;
+        margin: 121px auto 0;
     }
 
     .central-block {
