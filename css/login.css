@@ -38,7 +38,7 @@
 }
 
 body {
-    height: -moz-calc(100vh - 1px); /*todo надовать десигнеру по щщам за то что заставил такое писать*/
+    height: -moz-calc(100vh - 1px); /*todo надавать десигнеру по щам за то что заставил такое писать*/
     height: -webkit-calc(100vh - 1px);
     height: -o-calc(100vh - 1px);
     height: calc(100vh - 1px);
@@ -57,6 +57,7 @@ body {
     position: relative;
     display: grid;
     grid-template-rows: 335px 409px auto;
+    grid-template-columns: auto 600px auto;
 }
 
 @media (max-width: 640px) {
@@ -95,8 +96,10 @@ body {
 
 @media (min-width: 641px) {
     .header {
-        padding-left: 41.04%;
+        padding-left: 6.66vw; /*что требует тз*/
+        /*text-align: center; что требует сердце*/
         grid-row: 1;
+        grid-column: 2;
         padding-top: 141px;
     }
 
@@ -111,6 +114,7 @@ body {
     .central-block {
         width: 600px;
         grid-row: 2;
+        grid-column: 2;
         margin: 0 auto;
     }
 
