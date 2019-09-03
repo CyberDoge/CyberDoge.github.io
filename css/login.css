@@ -2,14 +2,14 @@
     font-family: 'Gotham';
     font-style: normal;
     font-weight: normal;
-    src: local('Gotham Bold'), url('../resources/font/Gotham-font/GothamBold.woff') format('woff');
+    src: url('../resources/font/Gotham-font/Gotham-Bold.otf');
 }
 
 @font-face {
-    font-family: 'Gotham Book';
+    font-family: 'GothamBook';
     font-style: normal;
     font-weight: normal;
-    src: local('Gotham Book'), url('../resources/font/Gotham-font/GothamBook.woff') format('woff');
+    src: url('../resources/font/Gotham-font/GothamBook.ttf');
 }
 
 ::placeholder {
@@ -40,7 +40,7 @@
 body {
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 
 .page {
@@ -133,15 +133,6 @@ body {
         background-position: center;
         background-image: url("../resources/img/background.png");
     }
-
-    body {
-        height: -moz-calc(100vh - 1px); /*todo надавать десигнеру по щам за то что заставил такое писать*/
-        height: -webkit-calc(100vh - 1px);
-        height: -o-calc(100vh - 1px);
-        height: calc(100vh - 1px);
-        margin: 1px 0 0 0;
-    }
-
 }
 
 .form {
@@ -205,7 +196,7 @@ body {
 }
 
 .form__invalid-email {
-    font-family: Gotham;
+    font-family: Gotham, serif;
     color: #ED4159;
     background: rgba(237, 65, 89, 0.25);
     border-radius: 4px;
@@ -217,6 +208,7 @@ body {
     padding: 12px 16px 8px;
     height: auto;
     min-height: 40px;
+    opacity: 1;
 }
 
 .form__submit {
@@ -229,7 +221,7 @@ body {
     background: #ED4159;
     box-shadow: 0 4px 16px rgba(237, 65, 89, 0.4);
     border-radius: 100px;
-    font-family: "Gotham Book", serif;
+    font-family: "GothamBook", serif;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
@@ -251,4 +243,6 @@ body {
 .form__input_email-wrong {
     border: 1px solid #ED4159;
     color: #ED4159;
+    opacity: 1;
+
 }
