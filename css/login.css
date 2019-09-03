@@ -209,13 +209,14 @@ body {
     color: #ED4159;
     background: rgba(237, 65, 89, 0.25);
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    padding: 11px 16px;
+    padding: 12px 16px 8px;
     height: auto;
+    min-height: 40px;
 }
 
 .form__submit {
