@@ -135,7 +135,7 @@ body {
     }
 }
 
-.form {
+.central-block__content {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

@@ -1,18 +1,10 @@
-const userInfo = `
-    <div class="user-info central-block">
-        <img class="user-icon" alt="user icon"/>
-        <div class="user-name"></div>
-        <button class="btn-logout active-btn" onclick="logout()">Logout</input>
-    </div>
-`;
-
-
 const emailInput = document.querySelector(".form__input_email");
 const passwordInput = document.querySelector(".form__input_password");
 const page = document.querySelector(".page");
 const invalidEmail = document.querySelector(".form__invalid-email");
+const centralBlock = document.querySelector(".central-block");
 const form = document.querySelector(".form");
-
+const userInfo = document.querySelector("#user-info-template");
 const parseForm = () => {
     return JSON.stringify({
         "email": emailInput.value,
@@ -53,8 +45,8 @@ form.onsubmit = (e) => {
 };
 
 const setUserInfo = (jsonObj) => {
-    page.removeChild(form);
-    page.insertAdjacentHTML("beforeend", userInfo);
+    centralBlock.removeChild(form);
+    centralBlock.appendChild(document.importNode(userInfo.content, true));
     const userInfoDiv = document.querySelector(".user-info");
     userInfoDiv.querySelector(".user-icon").src = jsonObj.photoUrl;
     userInfoDiv.querySelector(".user-name").textContent = jsonObj.name;
@@ -62,5 +54,5 @@ const setUserInfo = (jsonObj) => {
 
 const logout = () => {
     page.removeChild(document.querySelector(".user-info"));
-    page.appendChild(form)
+    centralBlock.appendChild(form)
 };
