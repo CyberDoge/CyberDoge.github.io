@@ -1,22 +1,30 @@
-class Api {
+export default class Api {
     constructor(host, isHttps) {
-        this.host = new URL(protocol ? 'http' : 'https' + '://' + host);
+        this.host = new URL(isHttps ? 'http' : 'https' + '://' + host);
     }
+
     /**
-     * 
-     * @param {string} path 
-     * @param {JSON} requestBody 
-     * @param {requestCallback} func 
+     *
+     * @param {string} path
+     * @param {Object} requestObject
+     * @param {function} funcOk success response
+     * @param {function} funError error response
      */
-    getRequest(path, requestBody, func) {
-        let urlOfRequest = new URL(path, this.host) 
-        fetch(urlOfRequest,
+    postRequest(path, requestObject, funcOk, funError) {
+        let urlOfRequest = new URL(path, this.host);
+        fetch(urlOfRequest.toString(),
             {
-                method: 'GET', mode: 'cors',
+                method: 'POST', mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: requestBody,
-            }).then(response=>func(response));
+                body: JSON.stringify(requestObject),
+            }).then(response => {
+            if (response.ok) {
+                response.json().then(data => funcOk(data))
+            } else {
+                funError();
+            }
+        });
     }
 }
