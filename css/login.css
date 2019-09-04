@@ -104,7 +104,7 @@ body {
     }
 
     .form {
-        margin: auto;
+        margin: 125px auto;
     }
 
     .central-block {
@@ -128,7 +128,7 @@ body {
 
     .page {
         display: grid;
-        grid-template-rows: 335px 409px auto;
+        grid-template-rows: 210px 409px auto;
         grid-template-columns: auto 600px auto;
         background-position: center;
         background-image: url("../resources/img/background.png");

@@ -53,6 +53,6 @@ const setUserInfo = (jsonObj) => {
 };
 
 const logout = () => {
-    page.removeChild(document.querySelector(".user-info"));
+    centralBlock.removeChild(document.querySelector(".user-info"));
     centralBlock.appendChild(form)
 };
