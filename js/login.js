@@ -1,3 +1,6 @@
+import Api from './api.js';
+
+const api = new Api('us-central1-mercdev-academy.cloudfunctions.net', false)
 const emailInput = document.querySelector(".form__input_email");
 const passwordInput = document.querySelector(".form__input_password");
 const page = document.querySelector(".page");
@@ -56,3 +59,10 @@ const logout = () => {
     centralBlock.removeChild(document.querySelector(".user-info"));
     centralBlock.appendChild(form)
 };
+
+api.getRequest('login',  JSON.stringify({
+    "email": emailInput.value,
+    "password": passwordInput.value
+}), (response)=>{
+    console.log(response)
+})
