@@ -2,14 +2,14 @@
     font-family: 'Gotham';
     font-style: normal;
     font-weight: normal;
-    src: local('Gotham Bold'), url('../resources/font/Gotham-font/GothamBold.woff') format('woff');
+    src: url('../resources/font/Gotham-font/Gotham-Bold.otf');
 }
 
 @font-face {
-    font-family: 'Gotham Book';
+    font-family: 'GothamBook';
     font-style: normal;
     font-weight: normal;
-    src: local('Gotham Book'), url('../resources/font/Gotham-font/GothamBook.woff') format('woff');
+    src: url('../resources/font/Gotham-font/GothamBook.ttf');
 }
 
 ::placeholder {
@@ -37,16 +37,21 @@
     color: #262626;
 }
 
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
 .page {
-    background-image: url("../resources/img/background.png");
-    background-size: cover;
+    background-size: initial;
     margin: 0;
     box-sizing: border-box;
     overflow: auto;
     background-attachment: fixed;
     width: 100%;
-    height: auto;
-    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
 }
 
 @media (max-width: 640px) {
@@ -81,14 +86,17 @@
 
     .page {
         background-image: url("../resources/img/background-mobile.png");
+        background-size: cover;
     }
 }
 
-
 @media (min-width: 641px) {
     .header {
-        margin-top: 141px;
-        padding-left: 41.04%;
+        padding-left: 6.66vw; /*что требует тз*/
+        /*text-align: center; что требует сердце*/
+        grid-row: 1;
+        grid-column: 2;
+        padding-top: 141px;
     }
 
     .header__logo::before {
@@ -96,11 +104,14 @@
     }
 
     .form {
-        margin: 125px auto 0;
+        margin: 125px auto auto;
     }
 
     .central-block {
         width: 600px;
+        grid-row: 2;
+        grid-column: 2;
+        margin: 0 auto;
     }
 
     .form__element {
@@ -116,11 +127,15 @@
     }
 
     .page {
+        display: grid;
+        grid-template-rows: 210px 409px auto;
+        grid-template-columns: auto 600px auto;
+        background-position: center;
         background-image: url("../resources/img/background.png");
     }
 }
 
-.central-block {
+.central-block__content {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -181,17 +196,19 @@
 }
 
 .form__invalid-email {
-    font-family: Gotham;
+    font-family: Gotham, serif;
     color: #ED4159;
     background: rgba(237, 65, 89, 0.25);
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    padding: 11px 16px;
+    padding: 12px 16px 8px;
     height: auto;
+    min-height: 40px;
+    opacity: 1;
 }
 
 .form__submit {
@@ -204,7 +221,7 @@
     background: #ED4159;
     box-shadow: 0 4px 16px rgba(237, 65, 89, 0.4);
     border-radius: 100px;
-    font-family: "Gotham Book", serif;
+    font-family: "GothamBook", serif;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
@@ -226,4 +243,6 @@
 .form__input_email-wrong {
     border: 1px solid #ED4159;
     color: #ED4159;
+    opacity: 1;
+
 }
