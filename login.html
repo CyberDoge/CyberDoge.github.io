@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Login</title>
     <link href="css/login.css" rel="stylesheet" type="text/css"/>
     <link href="css/user-info.css" rel="stylesheet" type="text/css"/>
-    <script defer type='module'  src="js/login.js"></script>
+    <script defer src="js/login.js" type="module"></script>
 </head>
 <body>
 <div class="page">
@@ -17,17 +17,33 @@
         <form class="form central-block__content">
             <div class="form__element form__title">Log In</div>
             <div class="form__element form__input_content-div">
-                <input class="form__input-item form__input_email" placeholder="E-Mail" type="email">
-                <input class="form__input-item form__input_password last" placeholder="Password" type="password">
-                <div class="form__input-item form__invalid-email hide">E-Mail or password is incorrect</div>
+                <input
+                        class="form__input-item form__input_email"
+                        placeholder="E-Mail"
+                        type="email"
+                />
+                <input
+                        class="form__input-item form__input_password last"
+                        placeholder="Password"
+                        type="password"
+                />
+                <div class="form__input-item form__invalid-email hide">
+                    E-Mail or password is incorrect
             </div>
-            <input class="form__element form__submit active-btn" type="submit" value="Login">
+            </div>
+            <input
+                    class="form__element form__submit active-btn"
+                    type="submit"
+                    value="Login"
+            />
         </form>
         <template id="user-info-template">
             <div class="user-info central-block__content">
                 <img alt="user icon" class="user-icon"/>
                 <div class="user-name"></div>
-                <button class="btn-logout active-btn" onclick="logout()">Logout</button>
+                <button class="btn-logout active-btn" onclick="logout()">
+                    Logout
+                </button>
             </div>
         </template>
     </div>

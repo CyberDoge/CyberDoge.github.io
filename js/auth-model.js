@@ -5,17 +5,16 @@ export default class AuthModel {
      * @param {string | Node} password
      */
     constructor(email, password) {
-        if (email.constructor.name === "HTMLInputElement") {
-            this.email = email.value;
+        if (email.constructor.name === 'HTMLInputElement') {
+            this.email = email.value
         } else {
-            this.email = email;
-
+            this.email = email
         }
 
-        if (password.constructor.name === "HTMLInputElement") {
-            this.password = password.value;
+        if (password.constructor.name === 'HTMLInputElement') {
+            this.password = password.value
         } else {
-            this.password = password;
+            this.password = password
         }
     }
 }
