@@ -104,7 +104,7 @@ body {
     }
 
     .form {
-        margin: 125px auto;
+        margin: 125px auto auto;
     }
 
     .central-block {

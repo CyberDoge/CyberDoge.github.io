@@ -12,11 +12,12 @@ export default class PageContentController {
         this.form.onsubmit = onsubmit;
     }
 
-    showWrongEmailErrorDiv() {
+    showWrongEmailErrorDiv(message) {
         this.emailInput.classList.add("form__input_email-wrong");
         this.passwordInput.classList.remove("last");
         this.invalidEmail.classList.remove("hide");
         this.invalidEmail.classList.add("last");
+        if (message) this.invalidEmail.innerHTML = message;
     }
 
     setUserInfo(jsonObj) {
